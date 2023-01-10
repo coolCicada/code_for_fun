@@ -1,19 +1,20 @@
 function solve() {
   const N = Number(cl());
-  const arr = cl().split(' ').map((item) => Number(item));
-  const MIN = Math.min(...arr);
-  const MAX = Math.max(...arr);
+  const arr = cl().split(' ').map(Number);
+  let min = Infinity;
+  let max = -Infinity;
+  for (let i = 0; i < N; i++) {
+    min = Math.min(min, arr[i]);
+    max = Math.max(max, arr[i]);
+  }
   let minC = 0;
   let maxC = 0;
-  for (let i = 0; i < N; i++) {
-    if (arr[i] === MIN) minC += 1;
-    if (arr[i] === MAX) maxC += 1;
+  for (const a of arr) {
+    if (min === a) minC += 1;
+    if (max === a) maxC += 1;
   }
-  if (minC === N) {
-    co(minC * (minC - 1));
-  } else {
-    co(minC * maxC * 2);
-  }
+  if (minC === N) return co(minC * (minC - 1))
+  return co(minC * maxC * 2)
 }
 
 function Solution() {
