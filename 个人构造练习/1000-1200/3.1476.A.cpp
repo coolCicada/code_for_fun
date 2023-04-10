@@ -14,8 +14,7 @@ int main() {
     LL n, k;
     cin >> n >> k;
 
-    int d = (n + k - 1) / k;
-    k *= d;
+    k *= (n + k - 1) / k;
 
     cout << (k + n - 1) / n << endl;
   }
