@@ -10,15 +10,15 @@ int main() {
   int t;
   cin >> t;
 
-  while (t --) {
-    int a, b;
+  while(t --) {
+    LL a, b;
     cin >> a >> b;
 
     if (b == 1) {
       cout << "NO" << endl;
     } else {
       cout << "YES" << endl;
-      cout << a << ' ' << (LL)a * b << ' ' << (LL)a * (b + 1) << endl;
+      cout << a << ' ' << a * b << ' ' << a * (b + 1) << endl;
     }
   }
 
