@@ -6,26 +6,18 @@ typedef long long LL;
 void solve() {
   int n;
   cin >> n;
-
   vector<int> arr(n);
-  for (int i = 0; i < n; i ++) {
-    cin >> arr[i];
-  }
+  for (int i = 0; i < n; i ++) cin >> arr[i];
 
   sort(arr.begin(), arr.end());
 
-  int l = (n - 1) >> 1, r = ((n - 1) >> 1) + 1;
+  int l = (n - 1) >> 1, r = l + 1;
 
-  bool flag = true;
-
-  while (l >= 0 || r < n) {
-    if (flag) {
-      cout << arr[l --] << ' ';
-    }  else {
-      cout << arr[r ++] << ' ';
-    }
-    flag = !flag;
+  for (; r < n; l --, r ++) {
+    cout << arr[l] << ' ' << arr[r] << ' ';
   }
+
+  if (n % 2 != 0) cout << arr[0];
 
   cout << endl;
 }
