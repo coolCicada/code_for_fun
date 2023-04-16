@@ -1,1 +1,2 @@
+- 20230415 [A. Common Prefixes](https://codeforces.com/problemset/problem/1384/A)
 - 20230416 [C. Mocha and Hiking](https://codeforces.com/problemset/problem/1559/C)

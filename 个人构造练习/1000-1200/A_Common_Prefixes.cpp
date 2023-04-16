@@ -13,18 +13,11 @@ void solve() {
     mv = max(mv, i);
   }
 
-  string s = "";
-  for (int i = 0; i <= mv; i ++) {
-    s += 'a';
-  }
+  string s = string(mv + 1, 'a');
   cout << s << endl;
   for (int i = 0; i < n; i ++) {
-    string curr = "";
-    curr += s.substr(0, a[i]);
-    curr += 'a' + (s[a[i]] + 1 - 'a') % 26 ;
-    curr += s.substr(a[i] + 1);
-    cout << curr << endl;
-    s = curr;
+    s[a[i]] = s[a[i]] == 'a' ? 'b' : 'a'; 
+    cout << s << endl;
   }
 }
 
@@ -34,8 +27,7 @@ int main() {
 
   int t;
   cin >> t;
-
-  while (t --) solve();
+  while(t --) solve();
 
   return 0;
 }
