@@ -1,5 +1,1 @@
-## 3 1476/A
-
-### 知识点
-
-- (n + k - 1) / k
+- 20230416 [C. Mocha and Hiking](https://codeforces.com/problemset/problem/1559/C)
