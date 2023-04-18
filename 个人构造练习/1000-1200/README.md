@@ -1,3 +1,4 @@
 - 20230415 [A. Common Prefixes](https://codeforces.com/problemset/problem/1384/A)
 - 20230416 [C. Mocha and Hiking](https://codeforces.com/problemset/problem/1559/C)
 - 20230417 [B. BerSU Ball](https://codeforces.com/problemset/problem/489/B)
+- 20230418 [B. Prinzessin der Verurteilung](https://codeforces.com/contest/1536/problem/B)
