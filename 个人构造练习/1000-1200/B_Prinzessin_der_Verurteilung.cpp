@@ -9,25 +9,18 @@ void solve() {
   string s;
   cin >> s;
 
-  unordered_set<string> st;
-  string tmp = "";
-  for (int i = 0; i < n; i ++) st.insert(tmp + s[i]);
-  for (int i = 0; i < n - 1; i ++) st.insert(s.substr(i, 2));
-  for (int i = 0; i < n - 2; i ++) st.insert(s.substr(i, 3));
-
-  vector<string> v = {""};
-
-  for (int i = 0; i < v.size(); i ++) {
+  vector<string> a = {""};
+  for (int i = 0; i < a.size(); i ++) {
     for (int j = 0; j < 26; j ++) {
-      string curr = v[i] + char('a' + j);
-      if (!st.count(curr)) {
-        cout << curr << endl;
+      string t;
+      t = a[i] + char('a' + j);
+      if (s.find(t) == -1) {
+        cout << t << endl;
         return;
       }
-      v.push_back(curr);
+      a.push_back(t);
     }
   }
-
 }
 
 int main() {
