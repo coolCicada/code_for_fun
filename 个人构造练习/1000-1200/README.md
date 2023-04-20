@@ -3,3 +3,4 @@
 - 20230417 [B. BerSU Ball](https://codeforces.com/problemset/problem/489/B)
 - 20230418 [B. Prinzessin der Verurteilung](https://codeforces.com/contest/1536/problem/B)
 - 20230419 [B. Reverse Binary Strings](https://codeforces.com/problemset/problem/1437/B)
+- 20230420 [B. Before an Exam](https://codeforces.com/problemset/problem/4/B)
