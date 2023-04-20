@@ -8,12 +8,17 @@ void solve() {
   cin >> n;
   string s;
   cin >> s;
-  int cnt0 = 0;
-  int cnt1 = 0;
+
+  int cnt0 = 0, cnt1 = 0;
+
   for (int i = 1; i < s.size(); i ++) {
-    if (s[i] == '0' && s[i - 1] == '0') cnt0 ++;
-    if (s[i] == '1' && s[i - 1] == '1') cnt1 ++;
+    if (s[i] == '0' && s[i - 1] == '0') {
+      cnt0 ++;
+    } else if (s[i] == '1' && s[i - 1] == '1') {
+      cnt1 ++;
+    } 
   }
+
   cout << max(cnt0, cnt1) << endl;
 }
 
