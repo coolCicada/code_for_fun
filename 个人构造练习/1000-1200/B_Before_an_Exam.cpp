@@ -9,37 +9,37 @@ int main() {
 
   int d, sumTime;
   cin >> d >> sumTime;
+
   vector<pair<int, int> > a(d);
-  for (int i = 0; i < d; i ++) {
-    cin >> a[i].first >> a[i].second;
+  for (auto &i: a) {
+    cin >> i.first >> i.second;
   }
 
-  int min = 0, max = 0;
+  int minSum = 0, maxSum = 0;
   for (int i = 0; i < d; i ++) {
-    min += a[i].first;
-    max += a[i].second;
+    minSum += a[i].first;
+    maxSum += a[i].second;
   }
 
-  if (sumTime < min || sumTime > max) {
+  if (sumTime < minSum || sumTime > maxSum) {
     cout << "NO" << endl;
     return 0;
   }
-
   cout << "YES" << endl;
-
+  sumTime -= minSum;
   vector<int> res(d);
-  for (int i = 0; i < d; i ++) {
-    res[i] = a[i].first;
-    sumTime -= a[i].first;
-  }
+  for (int i = 0; i < d; i ++) res[i] = a[i].first;
 
-  for (int i = 0; i < d && sumTime; i ++) {
-    int add = sumTime < a[i].second - a[i].first ? sumTime : a[i].second - a[i].first;
-    sumTime -= add;
-    res[i] += add;
+  for (int i = 0; i < d; i ++) {
+    int re = a[i].second - a[i].first;
+    int t = re <= sumTime ? re : sumTime;
+    res[i] += t;
+    sumTime -= t;
   }
 
   for (int i = 0; i < d; i ++) cout << res[i] << ' ';
+
+  cout << endl;
 
   return 0;
 }
