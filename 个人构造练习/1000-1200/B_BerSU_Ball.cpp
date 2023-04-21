@@ -15,17 +15,10 @@ int main() {
   sort(a1.begin(), a1.end());
   sort(a2.begin(), a2.end());
 
-  int l = 0, r = 0;
   int cnt = 0;
-  while (l < m && r < n) {
-    if (abs(a1[l] - a2[r]) <= 1) {
-      cnt ++;
-      l ++, r ++;
-    }
-    else {
-      if (a1[l] > a2[r]) r ++;
-      else l ++;
-    } 
+  for (int i = 0, j = 0; i < a1.size() && j < a2.size(); i ++) {
+    while (a1[i] - a2[j] > 1) j ++;
+    if (a1[i] - a2[j] >= -1) cnt ++, j ++;
   }
 
   cout << cnt << endl;
