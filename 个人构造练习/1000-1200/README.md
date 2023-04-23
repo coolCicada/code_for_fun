@@ -6,3 +6,4 @@
 - 20230420 [B. Before an Exam](https://codeforces.com/problemset/problem/4/B)
 - 20230421 [B. Paranoid String](https://codeforces.com/problemset/problem/1694/B)
 - 20230422 [C. Dora and Search](https://codeforces.com/problemset/problem/1793/C)
+- 20230423 [B1. Palindrome Game (easy version)](https://codeforces.com/problemset/problem/1527/B1)
