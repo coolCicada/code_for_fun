@@ -10,15 +10,14 @@ void solve() {
   string s; cin >> s;
 
   int cnt = 0;
-  for (auto &i: s) {
-    if (i == '0') cnt ++;
-  }
+  for (auto &i: s) if (i == '0') cnt ++;
 
-  if (cnt % 2 == 0) cout << "BOB" << endl;
-  else {
-    if (cnt > 1) cout << "ALICE" << endl;
-    else cout << "BOB" << endl;
-  }
+  if (cnt % 2 == 0) {
+    cout << "BOB" << endl;
+  } else {
+    if (cnt == 1) cout << "BOB" << endl;
+    else cout << "ALICE" << endl;
+  } 
 }
 
 int main() {
