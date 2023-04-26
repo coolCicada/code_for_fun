@@ -1,0 +1,1 @@
+- 20230426 [L. Controllers](https://codeforces.com/contest/1776/problem/L)
