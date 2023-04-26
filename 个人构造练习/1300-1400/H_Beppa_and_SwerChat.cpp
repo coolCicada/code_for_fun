@@ -7,15 +7,16 @@ vector<string> stringSplit(const std::string& str, string delim) { int previous 
 
 void solve() {
   int n; cin >> n;
-  vector<int> a(n); for (auto &i: a) cin >> i;
-  vector<int> b(n); for (auto &i: b) cin >> i;
+  vector<int> a(n), b(n);
+  for (auto &i: a) cin >> i;
+  for (auto &i: b) cin >> i;
 
   int j = n - 1;
   for (int i = n - 1; i >= 0; i --) {
-    if (a[i] == b[j]) j --; 
+    if (a[i] == b[j]) j --;
   }
 
-  cout << n - (n - j - 1) << endl;
+  cout << n - (n - 1 - j) << endl;
 }
 
 int main() {
