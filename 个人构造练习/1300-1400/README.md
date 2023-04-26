@@ -1,1 +1,2 @@
 - 20230425 [H. Beppa and SwerChat](https://codeforces.com/contest/1776/problem/H)
+- 20230426 [D. Anti-Sudoku](https://codeforces.com/problemset/problem/1335/D)
