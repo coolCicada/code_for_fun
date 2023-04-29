@@ -8,23 +8,25 @@ vector<string> stringSplit(const std::string& str, string delim) { int previous 
 void solve() {
   int n; cin >> n;
   string a, b; cin >> a >> b;
-  vector<int> res;
+
+  vector<int> r;
   for (int i = 0; i < n; i ++) {
     if (a[i] != b[i]) {
-      if (i == 0) {
-        res.push_back(1);
-      } else {
-        res.push_back(i + 1);
-        res.push_back(1);
-        res.push_back(i + 1);
-      }
+      r.push_back(i + 1);
+      r.push_back(1);
+      r.push_back(i + 1);
     }
   }
-  cout << res.size() << ' ';
-  for (int i = 0; i < res.size(); i ++) {
-    cout << res[i] << ' ';
+
+  if (r.size()) {
+    cout << r.size() << ' ';
+    for (int i = 0; i < r.size(); i ++) {
+      cout << r[i] << ' ';
+    }
+    cout << endl;
+  } else {
+    cout << 0 << endl;
   }
-  cout << endl;
 }
 
 int main() {
