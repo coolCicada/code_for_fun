@@ -7,31 +7,31 @@ vector<string> stringSplit(const std::string& str, string delim) { int previous 
 
 void solve() {
   int n; cin >> n;
-  vector<vector<int> > a(2, vector<int>(n));
-  for (int i = 0; i < n; i ++) cin >> a[0][i];
-  for (int i = 0; i < n; i ++) cin >> a[1][i];
+  vector<int> a(n), b(n);
+  for (auto &i: a) cin >> i;
+  for (auto &i: b) cin >> i;
 
-  vector<int> one(n);
-  one[n - 1] = a[0][n - 1];
+  vector<int> aSuf(n), bPre(n);
+
+  aSuf[n - 1] = a[n - 1];
   for (int i = n - 2; i >= 0; i --) {
-    one[i] = one[i + 1] + a[0][i];
+    aSuf[i] = aSuf[i + 1] + a[i];
   }
 
-  vector<int> two(n);
-  two[0] = a[1][0];
+  bPre[0] = b[0];
   for (int i = 1; i < n; i ++) {
-    two[i] = two[i - 1] + a[1][i];
+    bPre[i] = bPre[i - 1] + b[i];
   }
 
-  int mn = 1e9; 
+  int r = 1e9;
   for (int i = 0; i < n; i ++) {
-    int r = i + 1 >= n ? 0 : one[i + 1];
-    int l = i - 1 >= 0 ? two[i - 1] : 0;
-
-    mn = min(max(r, l), mn);
+    int t1 = i == n - 1 ? 0 : aSuf[i + 1];
+    int t2 = i == 0 ? 0 : bPre[i - 1];
+    int t = max(t1, t2);
+    r = min(t, r);
   }
 
-  cout << mn << endl;
+  cout << r << endl;
 }
 
 int main() {
