@@ -11,4 +11,4 @@
 | 20230423 | [B1. Palindrome Game (easy version)](https://codeforces.com/problemset/problem/1527/B1) |
 | 20230424 | [A. Codehorses T-shirts](https://codeforces.com/contest/1000/problem/A) <br/> [F. Longest Strike](https://codeforces.com/contest/1676/problem/F) |
 | 20230519 | [B_Fedor_and_New_Game](https://codeforces.com/contest/467/problem/B) | 双重 for 循环 |
-| 20230529 |[A_Nastia_And_Nearly_Good_Numbers](https://codeforces.com/contest/1521/problem/A) |
+| 20230529 | [A_Nastia_And_Nearly_Good_Numbers](https://codeforces.com/contest/1521/problem/A) <br /> [A. K-divisible Sum](https://codeforces.com/contest/1476/problem/A) | |
